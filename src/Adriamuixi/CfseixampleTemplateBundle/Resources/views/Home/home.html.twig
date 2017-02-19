@@ -1,0 +1,27 @@
+{% extends '@AdriamuixiCfseixampleTemplate/Common/public_layout.html.twig' %}
+
+{% block title_tag %}{{ "web.home.title"|trans }}{% endblock %}
+{% block meta_description %}{{ "web.home.meta_description"|trans }}{% endblock %}
+{% block keywords %}{{ "web.home.keywords"|trans }}{% endblock %}
+
+{% block footer_js %}
+{{ parent() }}
+<script src="{{ asset('js/swiper.js') }}"></script>
+{% endblock %}
+
+{% block header_css %}
+{{ parent() }}
+<link rel="stylesheet" type="text/css" media="all" href="{{ asset('css/swiper.css') }}" />
+{% endblock %}
+
+{% block content %}
+
+<div class="hidden-xs hidden-sm">
+    part1 LG -MD
+</div>
+
+<div class="hidden-md hidden-lg">
+    part 1 XS -S;
+</div>
+
+{% endblock content %}

@@ -1,0 +1,4 @@
+{% set url = url(app.request.get('_route'), app.request.attributes.all)|split('?') %}
+{% if url.0 is defined %}
+    <link rel="canonical" href="{{ url.0 }}" />
+{% endif %}

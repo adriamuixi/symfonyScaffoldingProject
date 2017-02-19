@@ -1,0 +1,39 @@
+{% extends '::base.html.twig' %}
+
+{% set css_file = 'main.min.css' %}
+{% set js_file = 'main.min.js'%}
+{% block header_css %}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ asset(css_file) }}" />
+{% endblock header_css %}
+
+{% block footer_js %}
+    <script>
+        try { var javascriptFlash = {{ app.session.flashbag.get('javascriptFlash')|json_encode()|raw }}} catch (err) { var javascriptFlash = []; }
+    </script>
+
+    <script src="{{ asset(js_file) }}"></script>
+
+{% endblock footer_js %}
+
+{% block header_js %}
+    {{ parent() }}
+    <script>
+        var urlName = "{{ app.request.get('_route') }}";
+    </script>
+{% endblock header_js %}
+
+{% block body %}
+
+    {% block header %}
+        {% include '@AdriamuixiCfseixampleTemplate/Common/header_layout.twig' %}
+    {% endblock %}
+
+
+    {% block main_container %}
+        {% block content %}{% endblock %}
+    {% endblock main_container %}
+
+    {% block footer %}
+        {% include "@AdriamuixiCfseixampleTemplate/Common/footer_layout.twig" %}
+    {% endblock %}
+{% endblock body %}

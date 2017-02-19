@@ -1,0 +1,3 @@
+AdriamuixiCfseixampleBundle:
+    resource: "@AdriamuixiCfseixampleBundle/Controller/"
+    type:     annotation

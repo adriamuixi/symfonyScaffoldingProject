@@ -1,0 +1,3 @@
+adriamuixi_intranet_homepage:
+    path:     /
+    defaults: { _controller: AdriamuixiIntranetBundle:Default:index }

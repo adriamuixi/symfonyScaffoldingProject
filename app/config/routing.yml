@@ -1,0 +1,8 @@
+adriamuixi_cfseixample:
+    resource: "@AdriamuixiCfseixampleBundle/Resources/config/routing.yml"
+
+adriamuixi_botiga:
+    resource: "@AdriamuixiBotigaBundle/Resources/config/routing.yml"
+
+adriamuixi_intranet:
+    resource: "@AdriamuixiIntranetBundle/Resources/config/routing.yml"

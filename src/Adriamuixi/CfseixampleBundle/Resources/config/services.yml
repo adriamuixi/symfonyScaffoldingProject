@@ -1,0 +1,9 @@
+services:
+#    adriamuixi_cfseixample.example:
+#        class: Adriamuixi\CfseixampleBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+    atresmediahf.marketplace_twig_extension:
+        class: Adriamuixi\CfseixampleBundle\Twig\CfseixampleTwigExtension
+        public: false
+        tags:
+            - { name: twig.extension }
